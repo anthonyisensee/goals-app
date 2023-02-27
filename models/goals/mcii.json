@@ -1,0 +1,48 @@
+{
+    "info": {
+        "name": "Mental Contrasting & Implementation Intentions",
+        "description": "Mental contrasting and implementation intentions are two powerful techniques for achieving your goals. This is a simple app to help you use them.",
+        "abbreviation": "MCII",
+        "version": 1.0
+    },
+    "views": [
+        {
+            "type":"text",
+            "name":"intro",
+            "heading": "Mental Contrasting & Implementation Intentions",
+            "text":"Mental contrasting helps you visualize the positive effects of achieving a goal, orienting your brain towards the positive results of successful goal completion and helping you recognize what might stand in your way. \nImplementation intentions help you identify the key moments where action matters most so that you can create a plan for those situations. \nCombined, these processes naturally orient your brain towards the completion of a goal and help you develop a concrete course of action to take in order to achieve your goal!"
+        },
+        {
+            "type":"text",
+            "name":"quietplace",
+            "heading": "Find a Quiet Place",
+            "text":"In order to focus fully on the task at hand, find a quiet place where your attention won't be pulled away from the task at hand. If you can't find a quiet place, just do your best to eliminate distractions. Throw on some headphones with gentle music, for instance, and sit where visual distractions will be at a minimum.",
+            "buttonText": "I'm in a quiet place."
+        },
+        {
+            "type":"textbox",
+            "name": "goalname",
+            "heading": "Give the Goal a Name",
+            "text":"What actually is it your goal to do? Add a concise title fitting the phrase below. \nMy goal is to..."
+        },
+        {
+            "type": "textbox",
+            "name": "bestoutcome",
+            "heading": "Best Possible Outcome",
+            "text": "You said your goal was to ${goalname}. \nIn one to two sentences, what is the best possible outcome that could come from achieving this? \nThe best possible outcome of achieving my goal would be..."
+        },
+        {
+            "type": "text",
+            "name": "bestoutcomeimagine",
+            "heading": "Vividly Imagine the Best Possible Outcome",
+            "text": "You said that the best possible outcome would be ${bestoutcome}. \nTake as much time as you need to thoroughly imagine the events and experiences that would be associated with this outcome. Picture every detail that you can think of to help your brain associate this with the completion of your goal. \nThis is an important part of the process, so don't skip this!",
+            "buttonText": "I've fully imagined my success."
+        },
+        {
+            "type": "textarea",
+            "name": "bestoutcomedetails",
+            "heading": "Write About the Best Possible Outcome",
+            "text": "Write down everything you imagined:"
+        }
+    ]
+}

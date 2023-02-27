@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, SectionList, StatusBar } from 're
 
 const DATA = [
   {
-    title: 'Goals',
+    title: 'Your Goals',
     description: 'View your goals or create new ones.',
     data: ['Stop criticizing myself', 'Eat more healthy foods', 'Go to the gym more often', 'Get a new job', 'Enjoy life more', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'],
   }
@@ -20,8 +20,8 @@ const App = () => (
       )}
       renderSectionHeader={({ section: { title, description } }) => (
         <View style={styles.header}>
-          <Text style={styles.header_title}>{title}</Text>
-          <Text style={styles.description}>{description}</Text>
+          <Text style={styles.header.header_title}>{title}</Text>
+          <Text style={styles.header.description}>{description}</Text>
         </View>
       )}
     />
@@ -48,13 +48,15 @@ const styles = StyleSheet.create({
   },
   header: {
     marginLeft: 4,
-    marginBottom: 8,
-  },
-  header_title: {
-    fontSize: 32,
-  },
-  description: {
-    fontSize: 20
+    marginBottom: 12,
+    
+    header_title: {
+      fontSize: 32,
+      marginBottom: 4,
+    },
+    description: {
+      fontSize: 20
+    },
   },
   title: {
     fontSize: 16,
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   newGoalButton: {
     backgroundColor: '#7285FF',
     aspectRatio: 1,
-    borderRadius: 8,
+    borderRadius: 12,
     position: 'absolute',
     bottom: 16,
     right: 24,
