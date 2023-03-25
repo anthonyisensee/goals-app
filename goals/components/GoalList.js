@@ -9,7 +9,7 @@ const DATA = [
   }
 ];
 
-const GoalListView = () => (
+const GoalList = () => (
   <SafeAreaView style={styles.container}>
     <SectionList
       sections={DATA}
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GoalListView;
+export default GoalList;

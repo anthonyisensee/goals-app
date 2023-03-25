@@ -1,1 +1,0 @@
-/* Basic class for all other views to inherit from */
