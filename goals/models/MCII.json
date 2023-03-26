@@ -69,7 +69,7 @@
         {
             "component": "TextBoxComponent",
             "name": "Choose an Action",
-            "text": "The action I can take to defeat the main obstacle to my goal is...",
+            "text": "The action I can take to defeat the main obstacle to my goal is..."
         },
         {
             "component": "TextBoxComponent",
