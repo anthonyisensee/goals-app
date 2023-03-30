@@ -74,7 +74,7 @@
         {
             "component": "TextBoxComponent",
             "name": "Implementation Intention",
-            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was ${main_obstacle}. You also said that the action you could take to defeat it was ${action}.\n\nYou can use the same words, or change them to your liking. However, make sure your response fits the form below:\n\nIf...\n\n...occurs, then I will...",
+            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was ${main_obstacle}. You also said that the action you could take to defeat it was ${action}.\n\nYou can use the same words, or change them to your liking. However, make sure your response fits the form below:\n\nIf...\n\n...occurs, then I will..."
         },
         {
             "component": "TextComponent",

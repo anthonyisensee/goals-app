@@ -31,6 +31,7 @@ function TextComponent({ navigation, route }) {
 function TextBoxComponent({ navigation, route }) {
     const data = route.params;
     const buttonText = data.buttonText ? data.buttonText : "Continue";
+
     return (
         <View style={ss.goalContainer}>
             <Text>{data.text}</Text>
