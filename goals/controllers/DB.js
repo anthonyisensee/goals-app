@@ -1,19 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';import data from './../../sample_data.json';
-
-var goals = data.goals;
-
-export function SetGoalData(index, key, data) {
-    goals[index].fields[key] = data;
-}
-
-export function GetGoalData(index, key) {
-    return goals[index].fields[key];
-}
-
-export function GetAllGoalsTemp() {
-    return goals;
-}
-
 import * as SQLite from 'expo-sqlite';
 
 // Open database "goals.db" or create it if it doesn't exist
@@ -26,11 +10,11 @@ db.transaction(tx => {
     );
 });
 
-db.transaction(tx => {
-    tx.executeSql(
-        'ALTER TABLE goals ADD COLUMN type TEXT'
-    );
-});
+// db.transaction(tx => {
+//     tx.executeSql(
+//         'ALTER TABLE goals ADD COLUMN IF NOT EXISTS type TEXT'
+//     );
+// });
 
 // db.transaction(tx => {
 //     tx.executeSql(

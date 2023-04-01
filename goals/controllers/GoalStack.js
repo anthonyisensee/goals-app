@@ -2,8 +2,6 @@ import React from "react";
 import { Text, View, Button, TextInput } from 'react-native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ss } from '../../StyleSheet.js';
-
-
 import GoalList from "../components/GoalListComponent.js";
 
 /* MODEL DATA */
@@ -17,20 +15,47 @@ for (var i = 0; i < data.length - 1; i++) {
 
 /* COMPONENT MODELS */
 function TextComponent({ navigation, route }) {
+
+    console.log(route.params);
+
     const data = route.params;
-    const buttonText = data.buttonText ? data.buttonText: "Continue";
+    const buttonText = data.buttonText ? data.buttonText : "Continue";
+
+    const user_input = route.params.user_input ? route.params.user_input : {};  // conditional catches when not yet created
+
+    function OnButtonPress() {
+        const next_screen = data.next;
+        navigation.navigate(next_screen, { user_input: user_input });
+    }
+
     return (
         <View style={ss.goalContainer}>
             <Text>{data.text}</Text>
             {/* display a button only if data.next exists */}
-            {data.next && <Button title={buttonText} onPress={() => navigation.navigate(data.next)} />}
+            {data.next && <Button title={buttonText} onPress={OnButtonPress} />}
         </View>
     );
 }
 
 function TextBoxComponent({ navigation, route }) {
+    
+    console.log(route.params);
+
     const data = route.params;
     const buttonText = data.buttonText ? data.buttonText : "Continue";
+
+    const user_input = route.params.user_input ? route.params.user_input : {};  // conditional catches when not yet created
+    var textbox_user_input = "";
+    
+    function OnButtonPress() {
+        user_input[data.name] = textbox_user_input;
+        const next_screen = data.next;
+        navigation.navigate(next_screen, { user_input: user_input });
+    }
+
+    function OnChangeText(text) {
+        textbox_user_input = text;
+    }
 
     return (
         <View style={ss.goalContainer}>
@@ -38,10 +63,13 @@ function TextBoxComponent({ navigation, route }) {
             <TextInput
                 multiline
                 placeholder="Enter your text here"
-                onChangeText={(text) => console.log(text)}
+                onChangeText={OnChangeText}
             />
             {/* display a button only if data.next exists */}
-            {data.next && <Button title={buttonText} onPress={() => navigation.navigate(data.next)} />}
+            {data.next && <Button 
+                title={buttonText} 
+                onPress={OnButtonPress}
+            />}
         </View>
     );
 }
