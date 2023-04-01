@@ -1,44 +1,41 @@
-import { Text, View, SafeAreaView, SectionList, StatusBar, TouchableHighlight } from 'react-native';
+import React from 'react';
+import { Text, View, FlatList, TouchableHighlight } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 import { GetAllGoals } from "./../controllers/DB.js";
 
 const GoalList = ( { navigation } ) => {
 
-  // get data from database
-  var goals = GetAllGoals();
+  const [goals, setGoals] = React.useState([]);
 
-  // reformat data for SectionList consumption
-  var sections = [];
-
-  for (var key in goals) {
-    var names = [];
-    for (var i = 0; i < goals[key].length; i++) {
-      names.push(goals[key][i]["Goal Name"]);
-    }
-    sections.push({
-      title: key,
-      data: names
+  const refreshGoals = () => {
+    GetAllGoals((rows) => {
+      setGoals(rows);
     });
-  }
+  };
 
-  console.log(sections[0].data)
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      refreshGoals();
+    });
+
+    return unsubscribe;
+  }, [navigation]);
+
+  const renderItem = ({ item }) => {
+    return (
+      <View style={ss.item}>
+        <Text>{item.name}</Text>
+      </View>
+    );
+  };
 
   // define the actual component to return
   return (
     <View style={ss.container}>
-      <SectionList
-        sections={sections}
-        keyExtractor={(item, index) => item + index}
-        renderItem={({ item }) => (
-          <View style={ss.item}>
-            <Text style={ss.title}>{item}</Text>
-          </View>
-        )}
-        renderSectionHeader={({ section: { title } }) => (
-          <View style={ss.header}>
-            <Text style={ss.header.header_title}>{title}</Text>
-          </View>
-        )}
+      <FlatList
+        data={goals}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
       />
       <TouchableHighlight style={ss.newGoalButton} onPress={() => navigation.navigate('MCII Introduction')}>
         <Text style={ss.newGoalButton.text}>+</Text>
