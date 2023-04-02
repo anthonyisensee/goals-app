@@ -1,5 +1,5 @@
 import MCII from "../models/MCII.json";
-import { Text, View, Button } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 
 
@@ -10,16 +10,16 @@ export function MCIIIntroduction ( { navigation } ) {
         <View style={ss.container}>
             <Text style={ss.text.heading}>{info.name}</Text>
             <Text style={ss.text.body}>{info.description}</Text>
-            <View style={ss.buttonBottomMargin}>
-                <Button
-                    title={"The Research"}
-                    onPress={() => navigation.navigate('MCII Research')}
-                />
-            </View>
-            <Button
-                title={"Create an MCII Goal"}
+            <TouchableOpacity style={ss.largeButton}
+                onPress={() => navigation.navigate('MCII Research')}
+                activeOpacity={0.7}>
+                <Text style={ss.largeButton.text}>The Research</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={ss.largeButton}
                 onPress={() => navigation.navigate('Find a Quiet Place')}
-            />
+                activeOpacity={0.7}>
+                <Text style={ss.largeButton.text}>Create an MCII Goal</Text>
+            </TouchableOpacity>
         </View>
     );
 }

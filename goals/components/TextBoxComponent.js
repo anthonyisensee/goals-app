@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { ss } from '../../StyleSheet.js';
 
 export function TextBoxComponent({ navigation, route }) {
@@ -29,10 +29,10 @@ export function TextBoxComponent({ navigation, route }) {
                 onChangeText={OnChangeText}
             />
             {/* display a button only if data.next exists */}
-            {data.next && <Button
-                title={buttonText}
+            {data.next && <TouchableOpacity style={ss.largeButton}
                 onPress={OnButtonPress}
-            />}
+                activeOpacity={0.7}
+            ><Text style={ss.largeButton.text} >{buttonText}</Text></TouchableOpacity>}
         </View>
     );
 }

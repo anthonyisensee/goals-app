@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 
 export function TextComponent({ navigation, route }) {
@@ -18,7 +18,10 @@ export function TextComponent({ navigation, route }) {
         <View style={ss.goalContainer}>
             <Text style={ss.text.body}>{data.text}</Text>
             {/* display a button only if data.next exists */}
-            {data.next && <Button title={buttonText} onPress={OnButtonPress} />}
+            {data.next && <TouchableOpacity style={ss.largeButton}
+                onPress={OnButtonPress}
+                activeOpacity={0.7}
+            ><Text style={ss.largeButton.text} >{buttonText}</Text></TouchableOpacity>}
         </View>
     );
 }

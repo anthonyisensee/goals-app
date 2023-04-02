@@ -3,10 +3,9 @@ import { StyleSheet } from "react-native";
 export const ss = StyleSheet.create({
     goalContainer: {
         flex: 1,
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         padding: 16,
     },
-
     container: {
         padding: 16,
         flex: 1,
@@ -77,9 +76,6 @@ export const ss = StyleSheet.create({
             marginBottom: 3,
         }
     },
-    buttonBottomMargin: {
-        marginBottom: 16,
-    },
     text: {
         body: {
             fontSize: 16,
@@ -91,6 +87,19 @@ export const ss = StyleSheet.create({
         },
         bold: {
             fontWeight: 'bold',
+        }
+    },
+    largeButton: {
+        backgroundColor: '#7285FF',
+        padding: 10,
+        marginTop: 16,
+        borderRadius: 12,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        text: {
+            color: '#FFFFFF',
+            fontSize: 14,
         }
     }
 });

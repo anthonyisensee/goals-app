@@ -1,5 +1,5 @@
 import MCII from "../models/MCII.json";
-import { Text, View, Button } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 import { AddGoal } from "./../controllers/DB.js";
 
@@ -25,10 +25,11 @@ export function SummarySave ( { navigation, route } ) {
                     );
                 })
             }            
-            <Button
-                title={"Save My Goal"}
+            <TouchableOpacity style={ss.largeButton}
                 onPress={OnButtonPress}
-            />
+                activeOpacity={0.7}>
+                <Text style={ss.largeButton.text}>Save My Goal</Text>
+            </TouchableOpacity>
         </View>
     );
 }
