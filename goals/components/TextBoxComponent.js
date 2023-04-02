@@ -22,10 +22,10 @@ export function TextBoxComponent({ navigation, route }) {
 
     return (
         <View style={ss.goalContainer}>
-            <Text>{data.text}</Text>
-            <TextInput
+            <Text style={ss.text.body}>{data.text}</Text>
+            <TextInput style={ss.text.body}
                 multiline
-                placeholder="Enter your text here"
+                placeholder="Enter your text here..."
                 onChangeText={OnChangeText}
             />
             {/* display a button only if data.next exists */}

@@ -1,17 +1,12 @@
 {
     "info": {
         "name": "Mental Contrasting & Implementation Intentions",
-        "description": "Mental contrasting and implementation intentions are two powerful techniques for achieving your goals. This is a simple app to help you use them.",
+        "description": "Mental contrasting helps you visualize the positive effects of achieving a goal, orienting your brain towards the positive results of successful goal completion and helping you recognize what might stand in your way. \n\nImplementation intentions help you identify the key moments where action matters most so that you can create a plan for those situations. \n\nCombined, these processes naturally orient your brain towards the completion of a goal and help you develop a concrete course of action to take in order to achieve your goal!",
+        "research": "More information about the research backing the strategy of the goal will be found here. This will include hyperlinks to the location where an individual can find the research papers utilized as well a brief (2-4 sentence) abstract for each resource.",
         "abbreviation": "MCII",
         "version": 1.0
     },
     "components": [
-        {
-            "component": "TextComponent",
-            "name": "MCII Introduction",
-            "heading": "Mental Contrasting & Implementation Intentions",
-            "text": "Mental contrasting helps you visualize the positive effects of achieving a goal, orienting your brain towards the positive results of successful goal completion and helping you recognize what might stand in your way. \n\nImplementation intentions help you identify the key moments where action matters most so that you can create a plan for those situations. \n\nCombined, these processes naturally orient your brain towards the completion of a goal and help you develop a concrete course of action to take in order to achieve your goal!"
-        },
         {
             "component": "TextComponent",
             "name": "Find a Quiet Place",

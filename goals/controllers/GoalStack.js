@@ -5,6 +5,9 @@ import GoalList from "../components/GoalListComponent.js";
 
 import { TextBoxComponent } from "../components/TextBoxComponent.js"
 import { TextComponent } from "../components/TextComponent.js"
+import { GoalTypeSelection } from "../components/GoalTypeSelectionComponent.js"
+import { MCIIIntroduction } from "../components/MCIIIntroductionComponent.js"
+import { MCIIResearch } from "../components/MCIIResearchComponent.js"
 
 /* MODEL DATA */
 import MCII from "../models/MCII.json";
@@ -27,6 +30,9 @@ function GoalStackController() {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Your Goals" component={GoalList} />
+            <Stack.Screen name="Create a Goal" component={GoalTypeSelection} />
+            <Stack.Screen name="MCII Introduction" component={MCIIIntroduction} />
+            <Stack.Screen name="MCII Research" component={MCIIResearch} />
             {
                 // create needed screens dyanmically from data
                 data.map((item, index) => {

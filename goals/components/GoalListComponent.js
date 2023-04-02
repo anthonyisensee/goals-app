@@ -37,7 +37,7 @@ const GoalList = ( { navigation } ) => {
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-      <TouchableHighlight style={ss.newGoalButton} onPress={() => navigation.navigate('MCII Introduction')}>
+      <TouchableHighlight style={ss.newGoalButton} onPress={() => navigation.navigate('Create a Goal')}>
         <Text style={ss.newGoalButton.text}>+</Text>
       </TouchableHighlight>
     </View>

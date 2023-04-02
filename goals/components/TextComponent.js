@@ -16,7 +16,7 @@ export function TextComponent({ navigation, route }) {
 
     return (
         <View style={ss.goalContainer}>
-            <Text>{data.text}</Text>
+            <Text style={ss.text.body}>{data.text}</Text>
             {/* display a button only if data.next exists */}
             {data.next && <Button title={buttonText} onPress={OnButtonPress} />}
         </View>

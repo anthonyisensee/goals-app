@@ -53,4 +53,17 @@ export const ss = StyleSheet.create({
             marginBottom: 3,
         }
     },
+    buttonBottomMargin: {
+        marginBottom: 16,
+    },
+    text: {
+        body: {
+            fontSize: 16,
+            marginBottom: 12,
+        },
+        heading: {
+            fontSize: 20,
+            marginBottom: 8,
+        }
+    }
 });
