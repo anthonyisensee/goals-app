@@ -47,6 +47,12 @@ export function AddGoal(name, type, fields) {
     });
 }
 
+export function DeleteGoal(id) {
+    db.transaction(tx => {
+        tx.executeSql('DELETE FROM goals WHERE id = ?', [id]);
+    });
+}
+
 export function GetAllGoals(callback) {
     db.transaction(tx => {
         tx.executeSql(
@@ -56,5 +62,3 @@ export function GetAllGoals(callback) {
         );
     });
 }
-
-

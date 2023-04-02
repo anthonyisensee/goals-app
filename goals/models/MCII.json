@@ -76,11 +76,6 @@
             "name": "Imagine this Implementation Intention",
             "text": "You said that if ${X} occurs you will ${Y}.\n\nTake some time to really think about what this means. Imagine both the circumstances in which you might need to practice this and the response you've prepared!",
             "buttonText": "I've Fully Imagined My Plan"
-        },
-        {
-            "component": "TextComponent",
-            "name": "In Summary",
-            "text": "That's it! You did it. You identified your goal and the biggest obstacle to achieving it. What's more, you decided upon an actionable approach to overcoming that goal!\n\nHere's a summary of what you said: {Summary will be here, page will be scrollable.}"
         }
     ]
 }

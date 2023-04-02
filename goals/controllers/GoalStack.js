@@ -8,6 +8,7 @@ import { TextComponent } from "../components/TextComponent.js"
 import { GoalTypeSelection } from "../components/GoalTypeSelectionComponent.js"
 import { MCIIIntroduction } from "../components/MCIIIntroductionComponent.js"
 import { MCIIResearch } from "../components/MCIIResearchComponent.js"
+import { SummarySave } from "../components/SummarySaveComponent.js"
 
 /* MODEL DATA */
 import MCII from "../models/MCII.json";
@@ -17,6 +18,10 @@ var data = MCII.components;
 for (var i = 0; i < data.length - 1; i++) {
     data[i].next = data[i + 1].name;
 }
+
+// add correct next property to the last item
+// data[].next = "Summary";
+data[data.length - 1].next = "Summary";
 
 const mapping = {
     "TextComponent": TextComponent,
@@ -33,6 +38,7 @@ function GoalStackController() {
             <Stack.Screen name="Create a Goal" component={GoalTypeSelection} />
             <Stack.Screen name="MCII Introduction" component={MCIIIntroduction} />
             <Stack.Screen name="MCII Research" component={MCIIResearch} />
+            <Stack.Screen name="Summary" component={SummarySave} />
             {
                 // create needed screens dyanmically from data
                 data.map((item, index) => {

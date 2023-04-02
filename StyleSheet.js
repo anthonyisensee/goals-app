@@ -20,6 +20,30 @@ export const ss = StyleSheet.create({
         borderColor: '#EEEEEE',
         borderWidth: 2,
     },
+    listItem: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+    deleteButton: {
+        backgroundColor: '#FF0000',
+        color: '#FFFFFF',
+        padding: 6,
+        borderRadius: 12,
+    },
+    listDescription: {
+        fontSize: 12,
+        padding: 4,
+    },
+    goalType: {
+        fontSize: 12,
+        padding: 4,
+        color: '#FFFFFF',
+        backgroundColor: '#7285FF',
+        padding: 8,
+        borderRadius: 8,
+    },
     header: {
         marginLeft: 4,
         marginBottom: 12,
@@ -64,6 +88,9 @@ export const ss = StyleSheet.create({
         heading: {
             fontSize: 20,
             marginBottom: 8,
+        },
+        bold: {
+            fontWeight: 'bold',
         }
     }
 });

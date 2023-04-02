@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, View, FlatList, TouchableHighlight } from 'react-native';
+import { Text, View, FlatList, TouchableHighlight, Alert } from 'react-native';
 import { ss } from '../../StyleSheet.js';
-import { GetAllGoals } from "./../controllers/DB.js";
+import { GetAllGoals, DeleteGoal } from "./../controllers/DB.js";
 
-const GoalList = ( { navigation } ) => {
+const GoalList = ({ navigation }) => {
 
   const [goals, setGoals] = React.useState([]);
 
@@ -22,9 +22,34 @@ const GoalList = ( { navigation } ) => {
   }, [navigation]);
 
   const renderItem = ({ item }) => {
+
+    function OnDeletePress() {
+      Alert.alert(
+        'Confirm',
+        'Are you sure you want to delete this goal?',
+        [
+          {
+            text: 'Cancel',
+            style: 'cancel',
+          },
+          {
+            text: 'Delete',
+            style: 'destructive',
+            onPress: () => {
+              DeleteGoal(item.id);
+              refreshGoals();
+            },
+          },
+        ],
+        { cancelable: true }
+      );
+    }
+
     return (
-      <View style={ss.item}>
+      <View style={[ss.item, ss.listItem]}>
+        {/* <Text style={ss.goalType}>{item.type}</Text> */}
         <Text>{item.name}</Text>
+        <Text onPress={OnDeletePress} style={ss.deleteButton}>DEL</Text>
       </View>
     );
   };
