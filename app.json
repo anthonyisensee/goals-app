@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "anthonyisensee.goals-app",
+      "package": "com.anthonyisensee.goalsapp",
     },
     "web": {
       "favicon": "./assets/favicon.png"
