@@ -20,9 +20,26 @@ export function TextBoxComponent({ navigation, route }) {
         textbox_user_input = text;
     }
 
+    function replaceKeys(input, data) {
+        let output = input;
+        const keys = input.match(/{([^{}]*)}/g);
+        if (keys) {
+            keys.forEach((key) => {
+                const keyName = key.slice(1, -1);
+                const value = data[keyName];
+                if (value) {
+                    let replacedValue = value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+                    output = output.replace(new RegExp(key, "g"), replacedValue);
+                }
+            });
+        }
+        return output;
+    }
+
+
     return (
         <View style={ss.goalContainer}>
-            <Text style={ss.text.body}>{data.text}</Text>
+            <Text style={ss.text.body}>{replaceKeys(data.text, user_input)}</Text>
             <TextInput style={ss.text.body}
                 multiline
                 placeholder="Enter your text here..."

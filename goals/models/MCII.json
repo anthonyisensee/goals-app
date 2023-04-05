@@ -21,12 +21,12 @@
         {
             "component": "TextBoxComponent",
             "name": "Best Possible Outcome",
-            "text": "You said your goal was to {Goal Name}. \n\nIn one to two sentences, what is the best possible outcome that could come from achieving this? \n\nThe best possible outcome of achieving my goal would be..."
+            "text": "You said your goal was to \"{Goal Name}.\" \n\nIn one to two sentences, what is the best possible outcome that could come from achieving this? \n\nThe best possible outcome of achieving my goal would be..."
         },
         {
             "component": "TextComponent",
             "name": "Vividly Imagine the Best Possible Outcome",
-            "text": "You said that the best possible outcome would be {Best Possible Outcome}. \n\nTake as much time as you need to thoroughly imagine the events and experiences that would be associated with this outcome. Picture every detail that you can think of to help your brain associate this with the completion of your goal. \n\nThis is an important part of the process, so don't skip this!",
+            "text": "You said that the best possible outcome would be \"{Best Possible Outcome}.\" \n\nTake as much time as you need to thoroughly imagine the events and experiences that would be associated with this outcome. Picture every detail that you can think of to help your brain associate this with the completion of your goal. \n\nThis is an important part of the process, so don't skip this!",
             "buttonText": "I've Fully Imagined My Success."
         },
         {
@@ -37,12 +37,12 @@
         {
             "component": "TextBoxComponent",
             "name": "Identify the Main Obstacle",
-            "text": "You said your goal was to {Goal Name}.\n\nIn one to two sentences, what is the single biggest obstacle that might prevent you from completing your goal?\n\nThe main obstacle to completing my goal is..."
+            "text": "You said your goal was to \"{Goal Name}.\"\n\nIn one to two sentences, what is the single biggest obstacle that might prevent you from completing your goal?\n\nThe main obstacle to completing my goal is..."
         },
         {
             "component": "TextComponent",
             "name": "Vividly Imagine the Main Obstacle",
-            "text": "You said that your main obstacle would be {Identify the Main Obstacle}. \n\nAgain, take as much time as you need to thoroughly imagine the events and experiences that might be associated with this obstacle. Vividly picture every detail that you can think of to help your brain accept this as an obstacle to completing your goal.\n\nRemember, this is an important part of the process. Don't skip it!",
+            "text": "You said that your main obstacle would be \"{Identify the Main Obstacle}.\" \n\nAgain, take as much time as you need to thoroughly imagine the events and experiences that might be associated with this obstacle. Vividly picture every detail that you can think of to help your brain accept this as an obstacle to completing your goal.\n\nRemember, this is an important part of the process. Don't skip it!",
             "buttonText": "I've Fully Imagined My Obstacle"
         },
         {
@@ -58,7 +58,7 @@
         {
             "component": "TextComponent",
             "name": "Identify an Action",
-            "text": "You've already identified your main obstacle as {Identify the Main Obstacle}. But, what action might you take to overcome that obstacle?\n\nTake some time to really think about this. What possible action best fits the obstacle you've identified? What response will most increase the likelihood of achieving your goal?",
+            "text": "You've already identified your main obstacle as \"{Identify the Main Obstacle}.\" But, what action might you take to overcome that obstacle?\n\nTake some time to really think about this. What possible action best fits the obstacle you've identified? What response will most increase the likelihood of achieving your goal?",
             "buttonText": "I Know My Action"
         },
         {
@@ -69,12 +69,12 @@
         {
             "component": "TextBoxComponent",
             "name": "Implementation Intention",
-            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was \"{Identify the Main Obstacle}\". You also said that the action you could take to defeat it was \"{Identify an Action}\".\n\n We could stick those together for you, but it will help you better connect them in your mind if you do it. Using the same words or changing them to your liking, state your implementation intention in the form of \"\n\nIf _______ occurs, then I will _______."
+            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was \"{Identify the Main Obstacle}.\" You also said that the action you could take to defeat it was \"{Choose an Action}.\"\n\n In order to help you better connect them in your mind rewrite your if-then plan. Using the same words or changing them to your liking, state your implementation intention in the form of: \n\nIf _______ occurs, then I will _______."
         },
         {
             "component": "TextComponent",
             "name": "Imagine Your Implementation Intention",
-            "text": "You said that \"{Implementation Intention}\"\n\nTake some time to really think about what this means. Imagine both the circumstances in which you might need to practice this and enacting the response you've prepared.",
+            "text": "You said that \"{Implementation Intention}.\"\n\nTake some time to really think about what this means. Imagine both the circumstances in which you might need to practice this and enacting the response you've prepared.",
             "buttonText": "I've Fully Imagined My Plan"
         }
     ]

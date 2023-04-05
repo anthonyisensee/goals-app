@@ -14,9 +14,26 @@ export function TextComponent({ navigation, route }) {
         navigation.navigate(next_screen, { user_input: user_input });
     }
 
+    function replaceKeys(input, data) {
+        let output = input;
+        const keys = input.match(/{([^{}]*)}/g);
+        if (keys) {
+            keys.forEach((key) => {
+                const keyName = key.slice(1, -1);
+                const value = data[keyName];
+                if (value) {
+                    let replacedValue = value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+                    output = output.replace(new RegExp(key, "g"), replacedValue);
+                }
+            });
+        }
+        return output;
+    }
+
+
     return (
         <View style={ss.goalContainer}>
-            <Text style={ss.text.body}>{data.text}</Text>
+            <Text style={ss.text.body}>{replaceKeys(data.text, user_input)}</Text>
             {/* display button only if data.next exists */}
             {data.next && <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
                 onPress={OnButtonPress}
