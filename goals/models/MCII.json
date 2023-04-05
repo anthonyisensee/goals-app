@@ -2,7 +2,7 @@
     "info": {
         "name": "Mental Contrasting & Implementation Intentions",
         "description": "Mental contrasting helps you visualize the positive effects of achieving a goal, orienting your brain towards the positive results of successful goal completion and helping you recognize what might stand in your way. \n\nImplementation intentions help you identify the key moments where action matters most so that you can create a plan for those situations. \n\nCombined, these processes naturally orient your brain towards the completion of a goal and help you develop a concrete course of action to take in order to achieve your goal!",
-        "research": "More information about the research backing the strategy of the goal will be found here. This will include hyperlinks to the location where an individual can find the research papers utilized as well a brief (2-4 sentence) abstract for each resource.",
+        "research": "Mental contrasting is a technique by which you may imagine your goal as well as the main obstacle that may hinder you from achieving it. This will help you visualize both what you want as well as what may stand in your way, naturally orienting you towards the completion of your goal.\n\nImplementation intentions address your need for action, helping you create an if-then plan to respond to a critical event signalling your obstacle. That way, when the time comes to act, you have the best response already prepared.\n\nFor further information see the following research:\n\nPeter M. Gollwitzer, Doris Mayer, Christine Frick, Gabriele Oettingen. “Promoting the Self-Regulation of Stress in Health Care Providers: An Internet-Based Intervention”. Frontiers in Psychology, vol. 9, article 838, pp. 1-11, 2018.\n\nMaik Bieleke, Lucas Keller, Peter M. Gollwitzer. “If-then planning”. European Review of Social Psychology, vol. 32, num. 1, pp. 88-122, 2021.",
         "abbreviation": "MCII",
         "version": 1.0
     },
@@ -21,34 +21,34 @@
         {
             "component": "TextBoxComponent",
             "name": "Best Possible Outcome",
-            "text": "You said your goal was to ${goalname}. \n\nIn one to two sentences, what is the best possible outcome that could come from achieving this? \n\nThe best possible outcome of achieving my goal would be..."
+            "text": "You said your goal was to {Goal Name}. \n\nIn one to two sentences, what is the best possible outcome that could come from achieving this? \n\nThe best possible outcome of achieving my goal would be..."
         },
         {
             "component": "TextComponent",
             "name": "Vividly Imagine the Best Possible Outcome",
-            "text": "You said that the best possible outcome would be ${bestoutcome}. \n\nTake as much time as you need to thoroughly imagine the events and experiences that would be associated with this outcome. Picture every detail that you can think of to help your brain associate this with the completion of your goal. \n\nThis is an important part of the process, so don't skip this!",
+            "text": "You said that the best possible outcome would be {Best Possible Outcome}. \n\nTake as much time as you need to thoroughly imagine the events and experiences that would be associated with this outcome. Picture every detail that you can think of to help your brain associate this with the completion of your goal. \n\nThis is an important part of the process, so don't skip this!",
             "buttonText": "I've Fully Imagined My Success."
         },
         {
             "component": "TextBoxComponent",
             "name": "Write About the Best Possible Outcome",
-            "text": "Write down everything you imagined:"
+            "text": "Write down everything you visualized. The more you describe the thoughts and images you imagined, the more effective this process will be. Try to describe at least three or more thoughts or images you had while visualizing the best possible outcome."
         },
         {
             "component": "TextBoxComponent",
             "name": "Identify the Main Obstacle",
-            "text": "You said your goal was to ${goal_name}.\n\nIn one to two sentences, what is the single biggest obstacle that might prevent you from completing your goal?\n\nThe main obstacle to completing my goal is..."
+            "text": "You said your goal was to {Goal Name}.\n\nIn one to two sentences, what is the single biggest obstacle that might prevent you from completing your goal?\n\nThe main obstacle to completing my goal is..."
         },
         {
             "component": "TextComponent",
             "name": "Vividly Imagine the Main Obstacle",
-            "text": "You said that your main obstacle would be ${main_obstacle}. \n\nAgain, take as much time as you need to thoroughly imagine the events and experiences that might be associated with this obstacle. Vividly picture every detail that you can think of to help your brain accept this as an obstacle to completing your goal.\n\nRemember, this is an important part of the process. Don't skip it!",
+            "text": "You said that your main obstacle would be {Identify the Main Obstacle}. \n\nAgain, take as much time as you need to thoroughly imagine the events and experiences that might be associated with this obstacle. Vividly picture every detail that you can think of to help your brain accept this as an obstacle to completing your goal.\n\nRemember, this is an important part of the process. Don't skip it!",
             "buttonText": "I've Fully Imagined My Obstacle"
         },
         {
             "component": "TextBoxComponent",
             "name": "Write About the Main Obstacle",
-            "text": "Write down everything you imagined:"
+            "text": "Write down everything you visualized. Again, the more you describe the thoughts and images you imagined, the more effective this process will be. Once again, try to describe at least three or more thoughts or images you had while visualizing the main obstacle:"
         },
         {
             "component": "TextComponent",
@@ -58,7 +58,7 @@
         {
             "component": "TextComponent",
             "name": "Identify an Action",
-            "text": "You've already identified your main obstacle as ${main_obstacle}. But, what action might you take to overcome that obstacle?\n\nTake some time to really think about this. What best fits the obstacle you've identified? What will most increase the likelihood of achieving your goal?",
+            "text": "You've already identified your main obstacle as {Identify the Main Obstacle}. But, what action might you take to overcome that obstacle?\n\nTake some time to really think about this. What possible action best fits the obstacle you've identified? What response will most increase the likelihood of achieving your goal?",
             "buttonText": "I Know My Action"
         },
         {
@@ -69,12 +69,12 @@
         {
             "component": "TextBoxComponent",
             "name": "Implementation Intention",
-            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was ${main_obstacle}. You also said that the action you could take to defeat it was ${action}.\n\nYou can use the same words, or change them to your liking. However, make sure your response fits the form below:\n\nIf...\n\n...occurs, then I will..."
+            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was \"{Identify the Main Obstacle}\". You also said that the action you could take to defeat it was \"{Identify an Action}\".\n\n We could stick those together for you, but it will help you better connect them in your mind if you do it. Using the same words or changing them to your liking, state your implementation intention in the form of \"\n\nIf _______ occurs, then I will _______."
         },
         {
             "component": "TextComponent",
-            "name": "Imagine this Implementation Intention",
-            "text": "You said that if ${X} occurs you will ${Y}.\n\nTake some time to really think about what this means. Imagine both the circumstances in which you might need to practice this and the response you've prepared!",
+            "name": "Imagine Your Implementation Intention",
+            "text": "You said that \"{Implementation Intention}\"\n\nTake some time to really think about what this means. Imagine both the circumstances in which you might need to practice this and enacting the response you've prepared.",
             "buttonText": "I've Fully Imagined My Plan"
         }
     ]

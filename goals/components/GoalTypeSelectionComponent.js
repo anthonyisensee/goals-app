@@ -14,7 +14,7 @@ export function GoalTypeSelection ( { navigation } ) {
     return (
         <View style={ss.container}>
             <Text style={ss.text.heading}>Choose a Goal Type:</Text>
-            <Text style={[ss.item, ss.listItem]} onPress={() => navigation.navigate('MCII Introduction')}>
+            <Text style={[ss.item, ss.listItem, {textAlign: "center", marginTop: 16}]} onPress={() => navigation.navigate('MCII Introduction')}>
                 {info.name}
             </Text>
             <Text style={[ss.text.body, { textAlign: "center", marginTop: 16, }]}>More goal types coming soon!</Text>

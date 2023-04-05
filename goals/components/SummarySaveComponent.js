@@ -25,10 +25,10 @@ export function SummarySave ( { navigation, route } ) {
                     );
                 })
             }            
-            <TouchableOpacity style={ss.largeButton}
+            <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
                 onPress={OnButtonPress}
                 activeOpacity={0.7}>
-                <Text style={ss.largeButton.text}>Save My Goal</Text>
+                <Text style={ss.largeButtonPrimary.text}>Save My Goal</Text>
             </TouchableOpacity>
         </View>
     );

@@ -90,16 +90,26 @@ export const ss = StyleSheet.create({
         }
     },
     largeButton: {
-        backgroundColor: '#7285FF',
         padding: 10,
         marginTop: 16,
         borderRadius: 12,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+    },
+    largeButtonPrimary: {
+        backgroundColor: '#7285FF',
         text: {
             color: '#FFFFFF',
-            fontSize: 14,
+            fontSize: 16,
         }
-    }
+    },
+    largeButtonSecondary: {
+        backgroundColor: '#e6e6e6',
+        text: {
+            color: '#000000',
+            fontSize: 16,
+        }
+    },
+
 });

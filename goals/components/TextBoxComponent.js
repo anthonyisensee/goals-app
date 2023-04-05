@@ -28,11 +28,12 @@ export function TextBoxComponent({ navigation, route }) {
                 placeholder="Enter your text here..."
                 onChangeText={OnChangeText}
             />
-            {/* display a button only if data.next exists */}
-            {data.next && <TouchableOpacity style={ss.largeButton}
+            {/* display button only if data.next exists */}
+            {data.next && <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
                 onPress={OnButtonPress}
-                activeOpacity={0.7}
-            ><Text style={ss.largeButton.text} >{buttonText}</Text></TouchableOpacity>}
+                activeOpacity={0.7}>
+                <Text style={ss.largeButtonPrimary.text}>{buttonText}</Text>
+            </TouchableOpacity>}
         </View>
     );
 }

@@ -10,15 +10,15 @@ export function MCIIIntroduction ( { navigation } ) {
         <View style={ss.container}>
             <Text style={ss.text.heading}>{info.name}</Text>
             <Text style={ss.text.body}>{info.description}</Text>
-            <TouchableOpacity style={ss.largeButton}
+            <TouchableOpacity style={[ss.largeButton, ss.largeButtonSecondary]}
                 onPress={() => navigation.navigate('MCII Research')}
                 activeOpacity={0.7}>
-                <Text style={ss.largeButton.text}>The Research</Text>
+                <Text style={ss.largeButtonSecondary.text}>The Research</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={ss.largeButton}
+            <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
                 onPress={() => navigation.navigate('Find a Quiet Place')}
                 activeOpacity={0.7}>
-                <Text style={ss.largeButton.text}>Create an MCII Goal</Text>
+                <Text style={ss.largeButtonPrimary.text}>Create an MCII Goal</Text>
             </TouchableOpacity>
         </View>
     );
