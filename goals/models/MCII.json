@@ -53,7 +53,7 @@
         {
             "component": "TextComponent",
             "name": "Taking Action",
-            "text": "Congrats! You've identified your goal and the largest obstacle that might keep you from achieving it.\n\nYou will now create a plan to defeat your greatest obstacle. This is known as an implementation intention, or more simply, an if-then plan. \n\nBasically, this takes the form of \"if X occurs, I will Y\"."
+            "text": "Congrats! You've identified your goal and the largest obstacle that might keep you from achieving it.\n\nYou will now create a plan to defeat your greatest obstacle. This is known as an implementation intention, or more simply, an if-then plan. \n\nBasically, this takes the form of \"if X occurs, I will Y.\""
         },
         {
             "component": "TextComponent",
@@ -69,7 +69,7 @@
         {
             "component": "TextBoxComponent",
             "name": "Implementation Intention",
-            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was \"{Identify the Main Obstacle}.\" You also said that the action you could take to defeat it was \"{Choose an Action}.\"\n\n In order to help you better connect them in your mind rewrite your if-then plan. Using the same words or changing them to your liking, state your implementation intention in the form of: \n\nIf _______ occurs, then I will _______."
+            "text": "Now, for the full if-then plan. \n\nYou said your main obstacle was \"{Identify the Main Obstacle}.\" You also said that the action you could take to defeat it was \"{Choose an Action}.\"\n\nIn order to help you better connect them in your mind rewrite your if-then plan. Using the same words or changing them to your liking, state your implementation intention in the form of: \n\nIf _______ occurs, then I will _______."
         },
         {
             "component": "TextComponent",
