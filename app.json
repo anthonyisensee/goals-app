@@ -23,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/foreground-icon.png",
-        "backgroundImage": "./assets/icon-background.png"
+        "backgroundColor": "#7285FF"
       },
       "package": "com.anthonyisensee.goalsapp"
     },
