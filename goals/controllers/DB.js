@@ -47,6 +47,15 @@ export function AddGoal(name, type, fields) {
     });
 }
 
+export function UpdateGoal(id, name, type, fields) {
+    db.transaction(tx => {
+        tx.executeSql(
+            'UPDATE goals SET name = ?, type = ?, fields = ? WHERE id = ?',
+            [name, type, JSON.stringify(fields), id]
+        );
+    });
+}
+
 export function DeleteGoal(id) {
     db.transaction(tx => {
         tx.executeSql('DELETE FROM goals WHERE id = ?', [id]);

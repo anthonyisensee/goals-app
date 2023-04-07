@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, TouchableHighlight, Alert } from 'react-native';
+import { Text, View, FlatList, TouchableHighlight, TouchableOpacity, Alert } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 import { GetAllGoals, DeleteGoal } from "./../controllers/DB.js";
 
@@ -45,12 +45,21 @@ const GoalList = ({ navigation }) => {
       );
     }
 
+    function ShowItemSummary() {
+      const fields = JSON.parse(item.fields)
+      const data = { user_input: fields, mode: 'edit', goal_id: item.id};
+      navigation.navigate('Summary', data);
+    }
+
     return (
-      <View style={[ss.item, ss.listItem]}>
-        {/* <Text style={ss.goalType}>{item.type}</Text> */}
-        <Text>{item.name}</Text>
-        <Text onPress={OnDeletePress} style={ss.deleteButton}>DEL</Text>
-      </View>
+      <TouchableOpacity onPress={ShowItemSummary}
+        activeOpacity={.7}>
+        <View style={[ss.item, ss.listItem]}>
+          {/* <Text style={ss.goalType}>{item.type}</Text> */}
+          <Text>{item.name}</Text>
+          <Text onPress={OnDeletePress} style={ss.deleteButton}>DEL</Text>
+        </View>
+      </TouchableOpacity>
     );
   };
 
