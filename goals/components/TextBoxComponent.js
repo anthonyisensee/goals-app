@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 
 export function TextBoxComponent({ navigation, route }) {
@@ -11,9 +11,17 @@ export function TextBoxComponent({ navigation, route }) {
     var textbox_user_input = "";
 
     function OnButtonPress() {
-        user_input[data.name] = textbox_user_input;
-        const next_screen = data.next;
-        navigation.navigate(next_screen, { user_input: user_input });
+
+        // ensure data has been entered
+        if (data.required != false && textbox_user_input == "") {
+            Alert.alert("Missing Answer", "You must enter a response to continue.");
+        }
+        else {
+            user_input[data.name] = textbox_user_input;
+            const next_screen = data.next;
+            navigation.navigate(next_screen, { user_input: user_input });
+        }
+
     }
 
     function OnChangeText(text) {
