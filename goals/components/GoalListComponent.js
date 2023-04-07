@@ -25,7 +25,7 @@ const GoalList = ({ navigation }) => {
 
     function OnDeletePress() {
       Alert.alert(
-        'Confirm',
+        'Delete',
         'Are you sure you want to delete this goal?',
         [
           {

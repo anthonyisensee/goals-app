@@ -30,20 +30,36 @@ export function TextBoxComponent({ navigation, route }) {
 
     function replaceKeys(input, data) {
         let output = input;
-        const keys = input.match(/{([^{}]*)}/g);
-        if (keys) {
-            keys.forEach((key) => {
-                const keyName = key.slice(1, -1);
-                const value = data[keyName];
-                if (value) {
-                    let replacedValue = value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-                    output = output.replace(new RegExp(key, "g"), replacedValue);
+
+        // Find all instances of curly brackets containing keys
+        const regex = /{([^{}]+)}/g;
+        const matches = input.match(regex);
+
+        if (matches) {
+            // For each match, replace the curly brackets and key with the corresponding value from data
+            matches.forEach((match) => {
+                const key = match.slice(1, -1);
+                const value = data[key];
+                if (value !== undefined) {
+                    // Replace the match with the corresponding value, stripping the last punctuation mark if present
+                    const lastChar = value[value.length - 1];
+                    if (/[.,;!?]/.test(lastChar)) {
+                        output = output.replace(match, value.slice(0, -1));
+                    } else {
+                        output = output.replace(match, value);
+                    }
                 }
             });
         }
+
+        // Remove the last punctuation mark from the output, if present
+        const lastChar = output[output.length - 1];
+        if (/[.,;!?]/.test(lastChar)) {
+            output = output.slice(0, -1);
+        }
+
         return output;
     }
-
 
     return (
         <View style={ss.goalContainer}>
