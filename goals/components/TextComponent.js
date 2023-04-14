@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { ss } from '../../StyleSheet.js';
 
 export function TextComponent({ navigation, route }) {
@@ -38,24 +38,20 @@ export function TextComponent({ navigation, route }) {
             });
         }
 
-        // Remove the last punctuation mark from the output, if present
-        const lastChar = output[output.length - 1];
-        if (/[.,;!?]/.test(lastChar)) {
-            output = output.slice(0, -1);
-        }
-
         return output;
     }
 
     return (
-        <View style={ss.goalContainer}>
-            <Text style={ss.text.body}>{replaceKeys(data.text, user_input)}</Text>
-            {/* display button only if data.next exists */}
-            {data.next && <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
-                onPress={OnButtonPress}
-                activeOpacity={0.7}>
-                <Text style={ss.largeButtonPrimary.text}>{buttonText}</Text>
-            </TouchableOpacity>}
-        </View>
+        <ScrollView>
+            <View style={ss.goalContainer}>
+                <Text style={ss.text.body}>{replaceKeys(data.text, user_input)}</Text>
+                {/* display button only if data.next exists */}
+                {data.next && <TouchableOpacity style={[ss.largeButton, ss.largeButtonPrimary]}
+                    onPress={OnButtonPress}
+                    activeOpacity={0.7}>
+                    <Text style={ss.largeButtonPrimary.text}>{buttonText}</Text>
+                </TouchableOpacity>}
+            </View>
+        </ScrollView>
     );
 }
